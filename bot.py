@@ -83,22 +83,23 @@ except:
 	with open("data.pickle", "wb") as f:
 		pickle.dump((words, labels, training, output), f)
 
+# model
+tensorflow.compat.v1.reset_default_graph()
+
+net = tflearn.input_data(shape =[None, len(training[0])])
+net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, len(output[0]), activation="softmax")
+net = tflearn.regression(net)
+
+# training model
+# Improvement for accuracy: add more patterns, maybe get input from UH students themselves?
+model = tflearn.DNN(net)
+
+
 try:
 	model.load("model.tflearn")
 except:
-	# model
-	tensorflow.compat.v1.reset_default_graph()
-
-	net = tflearn.input_data(shape =[None, len(training[0])])
-	net = tflearn.fully_connected(net, 8)
-	net = tflearn.fully_connected(net, 8)
-	net = tflearn.fully_connected(net, len(output[0]), activation="softmax")
-	net = tflearn.regression(net)
-
-	# training model
-	# Improvement for accuracy: add more patterns, maybe get input from UH students themselves?
-	model = tflearn.DNN(net)
-
 	# Looking at the data
 	model.fit(training, output, n_epoch=500, batch_size=8, show_metric=True)
 	model.save("model.tflearn")
@@ -123,7 +124,7 @@ def chat():
 	while True:
 		inp = input("\nYou: ")
 		if inp.lower() == "bye":
-			print(f"\nGoodbye, I hope I answered all your issues!")
+			print(f"\nGoodbye, I hope I answered all your issues!\n")
 			break
 
 		# Model Prediction might need some work -Brandon

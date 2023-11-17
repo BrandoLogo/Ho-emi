@@ -11,13 +11,13 @@
          "context_set": ""
         },
         {"tag": "mobile-security",
-         "patterns": ["How can I secure my mobile device?", "backup my mobile device", "wipe my smartphone device", "lock smartphone", "Ways to secure mobile device(s)?", "Ways to secure your mobile device?", "Is my mobile device secure?"],
+         "patterns": ["Can you help me secure my mobile device?", "How can I secure my mobile device?", "backup my mobile device", "wipe my smartphone device", "lock smartphone", "Ways to secure mobile device(s)?", "Ways to secure your mobile device?", "Is my mobile device secure?"],
          "responses": ["Here are some ways you can secure your mobile device: Set your phone to automatically lock after a few minutes of inactivity, enable remote wipe, and set your device to erase itself after repeated failed login attempts (for example, erase smartphone data after 10 failed login attempts)."],
          "article": ["https://www.hawaii.edu/infosec/resources-tips/mobile-device-security/"],
          "context_set": ""
         },
         {"tag": "improve-security",
-         "patterns": ["How can I improve security on my device?", "security options", "improve security", "reinforce my device", "How to improve security?", "Is a password enough?", "Are antiviruses useful?", "How to secure device aside from passwords?", "security device options", "What are some security options?"],
+         "patterns": ["Can you help me secure my device?", "How can I improve security on my device?", "security options", "improve security", "reinforce my device", "How to improve security?", "Is a password enough?", "Are antiviruses useful?", "How to secure device aside from passwords?", "security device options", "What are some security options?"],
          "responses": ["Here are some security options: enable location applications, disable lock screen features and notifications, display emergency contact info on your lock screen, regulary check and install updates, and use antivirus software"],
          "article": ["https://www.hawaii.edu/infosec/resources-tips/mobile-device-security/"],
          "context_set": ""
